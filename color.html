@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Font Color with JavaScript</title>
+</head>
+<!-- Style -->
+<style>
+    body{
+        background-color: #111;
+    }
+    .main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        width:100%;
+        height: 100vh;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        .text{
+            font-size: 3rem;
+        }
+       #colorPicker{
+        height: 4rem;
+        width: 10rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+       }
+       button{
+        height: 2rem;
+        font-size: 1rem;
+        color: #fff;
+        width: 10rem;
+        border: none;
+        background-color: black;
+        border-radius: 10px;
+        margin-left: 20px;
+        cursor: pointer;
+       }
+    #color-code{
+    background-color: rgb(245, 5, 5);
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+        
+    }
+</style>
+
+<!-- html -->
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="text">
+                <p id="text">Color Picker by Jakaria Hasan</p>
+            </div>
+            <div class="color">
+                <h3>pick the color</h3>
+                <input type="color" id="colorPicker">
+                <button onclick="changeFontColor()">Change Font Color</button>
+                <a href="index.html"><button id="color-code">Color Code</button></a>
+
+            </div>
+
+
+            
+        </div>
+    </div>
+    
+   
+
+<!--                  Script                 -->
+    <script>
+        function changeFontColor() {
+            var textElement = document.getElementById('text');
+            var color = document.getElementById('colorPicker').value;
+            textElement.style.color = color;
+        }
+    </script>
+</body>
+</html>
